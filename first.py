@@ -5,6 +5,7 @@ data.replace('?', np.nan, inplace=True)
 data = data.astype({"age": np.float64, "fare": np.float64})
 data.replace({'male': 1, 'female': 0}, inplace=True)
 
+#tambah
 data = data[['sex', 'pclass','age','fare','survived']].dropna()
 from sklearn.model_selection import train_test_split
 x_train, x_test, y_train, y_test = train_test_split(data[['sex','pclass',"age",'fare']], data.survived, test_size=0.2, random_state=0)
